@@ -4,7 +4,12 @@ import {Route, Routes} from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
-
+import WebFont from 'webfontloader';
+WebFont.load({
+    google: {
+        families: ['Mate SC:200,300', 'sans-serif']
+    }
+});
 function App() {
   return (
       <Routes>

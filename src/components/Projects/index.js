@@ -23,6 +23,12 @@ const Projects= () => {
                 body={"Hello my name is nicholas. how are you"}
                 ></Card>
 
+                <Card
+                    title={"This is a sample project"}
+                    imageUrl={picture}
+                    body={"Hello my name is nicholas. how are you"}
+                ></Card>
+
             </div>
 
         </div>

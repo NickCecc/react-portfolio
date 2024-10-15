@@ -1,5 +1,5 @@
 .nav-bar {
-  background: #181818;
+  background: black;
   width: 76px;
   height: 100%;
   position: absolute;
@@ -7,6 +7,14 @@
   z-index: 3;
   min-height: 500px;
 
+  h1{
+    position: relative;
+    top: -10px;
+    width: 100%;       // Takes the full width of the parent
+    text-align: center; //
+    font-size: 50px;
+    color: white;
+  }
 
   .logo {
     display: block;

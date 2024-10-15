@@ -4,20 +4,20 @@ const About = () => {
     return(
         <div className={"container about-page"}>
             <div className={"text-zone"}>
-                <h1>
-                    <AnimatedLetters
-                        strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
-                        idx={15}
-                        ></AnimatedLetters>
-                </h1>
+                <h1>About me</h1>
                 <p>
-                    I am nick and i am 19
+                    My name is Nicholas Cecchin and I am studying Computer Science & Software Engineering at the
+                    University of Windsor. I am currently in my second year of studies and have a graduation
+                    date of April 2026. I am also enrolled in the COOP program and actively searching for an internship/COOP
+                    position.
                 </p>
                 <p>
-                    Another paragraph goes here
+                I have a few hobbies I like to do in my free time. Some of which include working on projects such as this website,
+                    learning new skills such as different programming languages, and flying planes (I am currently pursuing my private pilot license).
+
                 </p>
                 <p>
-                    Another paragraph goes here
+
                 </p>
 
             </div>

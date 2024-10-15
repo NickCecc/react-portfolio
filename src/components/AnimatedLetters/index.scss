@@ -1,7 +1,18 @@
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .text-animate {
   display: inline-block;
   opacity: 0;
-  animation: none;
+  animation: fade-in 0.8s ease-in;
   animation-fill-mode: forwards;
   min-width: 10px;
 }
@@ -12,7 +23,7 @@
   animation-fill-mode: both;
 
   &:hover {
-    animation: none;
+    animation: ease-in-out ease-in;
     color: #ffd700;
   }
 }

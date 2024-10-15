@@ -2,16 +2,16 @@ import {Link} from "react-router-dom";
 import "./index.scss";
 import AnimatedLetters from "../AnimatedLetters";
 import {useEffect, useState} from "react";
-
+import Three from "../ThreeJS/HomeCube";
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
-    const nameArray = [' ','N', 'i', 'c', 'h', 'o', 'l', 'a', 's']
-    const jobArray = ['w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
-
+    const codeArray = ['C', 'o', 'd', 'e', '.']
+    const jobArray = ['C', 'r', 'e', 'a', 't', 'e','.']
+    const student = ['C', 'o', 'n', 'q','u', 'e', 'r','.']
     useEffect(() => {
         const timeoutId = setTimeout(() => {
-            setLetterClass("text-animate-hover")
+            setLetterClass("text-animate")
         }, 4000)
 
         return () => clearTimeout(timeoutId);
@@ -19,27 +19,33 @@ const Home = () => {
 
     return (
         <div className={"container home-page"}>
-            <div className={"text-zone"}>
-                <h1>
-                    <span className={letterClass}>H</span>
-                    <span className={`${letterClass} _12`}>i</span>
+            <div className={"content-wrapper"}>
+                {/* Left Side: Letters */}
+                <div className={"text-zone"}>
+                    <h1>
+                        <AnimatedLetters letterClass={letterClass}
+                                         strArray={codeArray}
+                                         idx={15}/>
+                        <br></br>
+                        <AnimatedLetters letterClass={letterClass}
+                                         strArray={jobArray}
+                                         idx={16}/>
+                        <br></br>
+                        <AnimatedLetters letterClass={letterClass}
+                                         strArray={student}
+                                         idx={17}/>
+                    </h1>
                     <br></br>
-                    <span className={`${letterClass} _13`}>I</span>
-                    <span className={`${letterClass} _14`}>'m</span>
+                    <h2>Nicholas Cecchin,</h2>
+                    <h2>Computer Science & Software Engineering</h2>
+                    <Link to={"/contact"} className={"flat-button"}>CONTACT ME</Link>
+                </div>
 
-
-                    <AnimatedLetters letterClass={letterClass}
-                                     strArray={nameArray}
-                                     idx={15}/>
-                    <br></br>
-                    <AnimatedLetters letterClass={letterClass}
-                                     strArray={jobArray}
-                                     idx={24}/>
-                </h1>
-                <h2>Frontend Developer / JavaScript Expert</h2>
-                <Link to={"/contact"} className={"flat-button"}>CONTACT ME</Link>
+                {/* Right Side: 3D Object */}
+                <div className={"object-zone"}>
+                    <Three/> {/* Your 3D object component */}
+                </div>
             </div>
-
         </div>
     );
 }

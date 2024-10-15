@@ -1,0 +1,53 @@
+
+
+.about-page {
+
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48%;
+    max-height: 90%;
+
+
+
+  h1 {
+    font-size: 56px;
+    line-height: 80px;
+    margin:0;
+    font-family: "OpenSans", serif;
+    font-weight: 400;
+    animation: ease-in 1s;
+    //background: -webkit-linear-gradient(45deg, #4030d7, #f3f3fc);
+    background: -webkit-linear-gradient(45deg, #531fff, #3aeefd);
+
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+
+    img {
+      margin-left: 20px;
+      opacity: 0;
+      width: 32px;
+      height: auto;
+      animation: rotateIn 1s linear both;
+      animation-delay: 1.4s;
+    }
+
+    p{
+      padding-left: 10px;
+      font-size: 14px;
+    }
+  }
+
+
+
+  }
+
+
+
+
+

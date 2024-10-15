@@ -24,6 +24,7 @@ const Card = ({title, imageUrl, body}) => {
 
 
         </div>
+
     )
 }
 

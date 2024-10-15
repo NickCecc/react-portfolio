@@ -86,7 +86,7 @@
   white-space: nowrap;
 
   &:hover{
-    background: #1B998BFF;
+    background: -webkit-linear-gradient(45deg, #531fff, #3aeefd);
     color: #333;
   }
 }
