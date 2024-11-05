@@ -19,7 +19,7 @@ function Cube() {
     // Animate rotation
     useFrame(() => {
         if (meshRef.current) {
-            meshRef.current.rotation.y += 0.01;
+            meshRef.current.rotation.y += 0.005;
             meshRef.current.rotation.x += 0.005;
         }
     });

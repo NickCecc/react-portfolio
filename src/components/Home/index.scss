@@ -1,14 +1,30 @@
 .home-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh; // Make the container full height
 
   .text-zone {
-    position: absolute;
+    position: relative;
     left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
     width: 48%;
     max-height: 90%;
   }
 
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .canvas-container {
+    width: 50%; // Adjust the width to your preference
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   h1 {
     font-size: 55px;
@@ -17,17 +33,13 @@
     font-family: 'Mate SC', monospace;
     font-weight: 400;
     animation: ease-in 1s;
-    //background: -webkit-linear-gradient(45deg, #4030d7, #f3f3fc);
     background: -webkit-linear-gradient(45deg, #531fff, #3aeefd);
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     &:before {
       content: '<h1>';
       font-family: 'La Belle Aurore', cursive;
-
-
       font-size: 18px;
       position: absolute;
       margin-top: -40px;
@@ -46,17 +58,9 @@
       animation: fadeIn 1.7s backwards;
       opacity: 0.6;
     }
-
-    img {
-      margin-left: 20px;
-      opacity: 0;
-      width: 32px;
-      height: auto;
-      animation: rotateIn 1s linear both;
-      animation-delay: 1.4s;
-    }
   }
-  h2{
+
+  h2 {
     color: white;
     margin-top: 20px;
     font-weight: 400;
@@ -66,7 +70,7 @@
     animation: fade-in 1s 1.8s backwards;
   }
 
-  .flat-button{
+  .flat-button {
     color: white;
     font-size: 13px;
     font-weight: 400;
@@ -76,17 +80,13 @@
     padding: 10px 18px;
     border: 1px solid white;
     margin-top: 25px;
-    float: left;
+    display: inline-block;
     animation: fade-in 1s 1.8s backwards;
     white-space: nowrap;
 
-    &:hover{
+    &:hover {
       background: white;
       color: #333;
     }
   }
-
-
-
 }
-
