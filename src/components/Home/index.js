@@ -3,6 +3,8 @@ import "./index.scss";
 import AnimatedLetters from "../AnimatedLetters";
 import {useEffect, useState} from "react";
 import Three from "../ThreeJS/HomeCube";
+import {Canvas} from "@react-three/fiber";
+import Cube from "../Cube";
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -42,8 +44,18 @@ const Home = () => {
                 </div>
 
                 {/* Right Side: 3D Object */}
-                <div className={"object-zone"}>
-                    <Three/> {/* Your 3D object component */}
+                <div>
+                <Canvas
+                    style={{ height: '100vh', background: 'transparent' }} // Ensures CSS background is transparent
+                    shadows
+                    camera={{ position: [5, 5, 5], fov: 45 }}
+                    gl={{ alpha: true }}
+                >
+                    <ambientLight intensity={0.3} />
+                    <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
+                    <pointLight position={[-10, -10, -10]} intensity={0.5} />
+                    <Cube />
+                </Canvas>
                 </div>
             </div>
         </div>
